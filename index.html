@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Pablo Piminchumo Salinas · Arquitecto de Seguridad de Identidad</title>
+<meta name="description" content="Pedro Pablo Piminchumo Salinas: arquitecto de seguridad de identidad (IAM, Zero Trust, Microsoft Entra ID). Ingeniero informático por la Universidad Nacional de Trujillo, con más de 20 años en TI y sector financiero.">
+<meta name="author" content="Pedro Pablo Piminchumo Salinas">
+<link rel="canonical" href="https://piminchumosalinas.github.io/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Pedro Pablo Piminchumo Salinas · Arquitecto de Seguridad de Identidad">
+<meta property="og:description" content="Identidad, Zero Trust y gobierno de la seguridad en el sector financiero. Más de 20 años en TI.">
+<meta property="og:url" content="https://piminchumosalinas.github.io/">
+<meta property="og:image" content="https://piminchumosalinas.github.io/pedro-pablo-piminchumo-salinas.png">
+<meta property="profile:first_name" content="Pedro Pablo">
+<meta property="profile:last_name" content="Piminchumo Salinas">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pedro Pablo Piminchumo Salinas",
+  "givenName": "Pedro Pablo",
+  "familyName": "Piminchumo Salinas",
+  "alternateName": ["Pedro Piminchumo Salinas", "Pedro Piminchumo"],
+  "jobTitle": "Arquitecto de Seguridad de Identidad",
+  "description": "Arquitecto de seguridad de identidad (IAM, Zero Trust, Microsoft Entra ID) con más de 20 años en TI y sector financiero.",
+  "url": "https://piminchumosalinas.github.io/",
+  "image": "https://piminchumosalinas.github.io/pedro-pablo-piminchumo-salinas.png",
+  "homeLocation": { "@type": "Place", "name": "Lima, Perú" },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidad Nacional de Trujillo",
+    "address": { "@type": "PostalAddress", "addressLocality": "Trujillo", "addressCountry": "PE" }
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Ingeniero Informático", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Trujillo" } },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)" },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Fundamentals (AZ-900)" }
+  ],
+  "knowsAbout": ["Identity and Access Management", "Zero Trust", "Active Directory", "Microsoft Entra ID", "Conditional Access", "Privileged Access Management", "Tier model", "NIST Cybersecurity Framework", "ISO/IEC 27001", "Security architecture"],
+  "knowsLanguage": ["es", "en", "de"],
+  "sameAs": [
+    "https://pe.linkedin.com/in/pedropiminchumo",
+    "https://github.com/piminchumosalinas"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #16202e;
+    --ink-soft: #4a5566;
+    --muted: #7a8494;
+    --line: #e3dfd6;
+    --accent: #1f4e79;
+    --accent-soft: #e6eef6;
+    --gold: #a8792f;
+    --radius: 14px;
+    --maxw: 1040px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f141b;
+      --surface: #161d27;
+      --ink: #eef1f5;
+      --ink-soft: #b9c2cf;
+      --muted: #8b95a4;
+      --line: #263142;
+      --accent: #8ab4e0;
+      --accent-soft: #1b2a3c;
+      --gold: #d4a75a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* Navegación */
+  nav.top {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 17px; color: var(--ink); text-decoration: none; letter-spacing: .2px; white-space: nowrap; }
+  .menu { display: flex; gap: 22px; font-size: 14px; }
+  .menu a { color: var(--ink-soft); text-decoration: none; }
+  .menu a:hover { color: var(--ink); }
+  @media (max-width: 760px) { .menu { display: none; } }
+
+  /* Portada */
+  header.hero { padding: 72px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 220px; gap: 48px; align-items: center; }
+  @media (max-width: 760px) { .hero-grid { grid-template-columns: 1fr; gap: 28px; } .portrait { order: -1; width: 140px; } }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0 0 14px; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif; font-weight: 600;
+    font-size: clamp(36px, 5.4vw, 58px); line-height: 1.05; letter-spacing: -.5px;
+    margin: 0 0 18px;
+  }
+  .headline { font-size: clamp(17px, 2vw, 20px); color: var(--ink-soft); margin: 0 0 22px; max-width: 640px; }
+  .lede { max-width: 640px; margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 999px; font-weight: 500; font-size: 15px;
+    text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0f141b; } }
+  .portrait {
+    width: 220px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+    background: var(--accent-soft); border: 1px solid var(--line);
+    display: grid; place-items: center;
+    font-family: "Fraunces", Georgia, serif; font-size: 64px; color: var(--accent);
+  }
+  .portrait { position: relative; }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Cifras */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 8px 0 0; }
+  @media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: var(--surface); padding: 22px 20px; }
+  .stat b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 30px; font-weight: 600; line-height: 1.1; color: var(--accent); }
+  .stat span { font-size: 14px; color: var(--ink-soft); }
+
+  /* Secciones */
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(26px, 3vw, 32px); margin: 0 0 8px; letter-spacing: -.2px; }
+  .section-intro { color: var(--ink-soft); margin: 0 0 32px; max-width: 680px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 0; }
+
+  /* Especialidades */
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card p { margin: 10px 0 0; color: var(--ink-soft); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .tag { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+
+  /* Trayectoria */
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .role { display: grid; grid-template-columns: 170px 1fr; gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .role:last-child { border-bottom: 0; }
+  @media (max-width: 680px) { .role { grid-template-columns: 1fr; gap: 6px; } }
+  .when { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .org { color: var(--gold); font-size: 14px; font-weight: 500; margin: 2px 0 10px; }
+  .role ul { margin: 0; padding-left: 18px; color: var(--ink-soft); }
+  .role li { margin: 4px 0; }
+  .sub { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+
+  /* Publicaciones */
+  .pubs { display: grid; gap: 12px; }
+  .pub { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--ink); }
+  .pub:hover { border-color: var(--accent); }
+  .pub small { color: var(--muted); white-space: nowrap; }
+
+  /* Ponencias */
+  .talks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (max-width: 760px) { .talks { grid-template-columns: 1fr; } }
+  .talk { padding: 18px 20px; border-left: 3px solid var(--gold); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
+  .talk h3 { font-size: 15.5px; }
+  .talk p { margin: 6px 0 0; font-size: 14px; color: var(--ink-soft); }
+
+  /* Certificaciones y formación */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+  .list { list-style: none; padding: 0; margin: 12px 0 0; }
+  .list li { padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 15px; }
+  .list li:last-child { border-bottom: 0; }
+  .list span { display: block; font-size: 13.5px; color: var(--muted); }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<nav class="top" aria-label="Navegación principal">
+  <div class="wrap">
+    <a class="brand" href="#">Pedro Pablo Piminchumo Salinas</a>
+    <div class="menu">
+      <a href="#especialidad">Especialidad</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <a href="#docencia">Docencia</a>
+      <a href="#credenciales">Credenciales</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Identidad · Zero Trust · Sector financiero</p>
+        <h1>Pedro Pablo Piminchumo Salinas</h1>
+        <p class="headline">Arquitecto de Seguridad de Identidad · IAM · Zero Trust · Microsoft Entra ID</p>
+        <p class="lede">Ingeniero informático por la Universidad Nacional de Trujillo, con más de 20 años en tecnología y la mayor parte de su carrera en el sector financiero regulado. Durante más de una década fue responsable de la plataforma de identidad de un banco sistémico, donde llevó la seguridad de un modelo reactivo a uno proactivo: modelo de capas, retiro de protocolos inseguros y gobierno de la identidad bajo Zero Trust.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://pe.linkedin.com/in/pedropiminchumo" rel="me">Perfil en LinkedIn</a>
+          <a class="btn" href="#publicaciones">Leer sus artículos</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="pedro-pablo-piminchumo-salinas.png" alt="Pedro Pablo Piminchumo Salinas" width="600" height="600" onerror="this.remove()"><span aria-hidden="true">PP</span>
+      </div>
+    </div>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>20+</b><span>años en tecnología</span></div>
+      <div class="stat" role="listitem"><b>10+</b><span>años al frente de la identidad de un banco sistémico</span></div>
+      <div class="stat" role="listitem"><b>1.000+</b><span>aplicaciones en el alcance del programa de protocolos</span></div>
+      <div class="stat" role="listitem"><b>2003</b><span>Microsoft Certified Trainer desde ese año</span></div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section id="especialidad">
+  <div class="wrap">
+    <h2>Especialidad</h2>
+    <p class="section-intro">Identidad como perímetro: diseño, gobierno y defensa de infraestructuras híbridas Microsoft en entornos regulados, con un enfoque que traduce el riesgo técnico en decisiones para auditoría, riesgo y negocio.</p>
+    <div class="pillars">
+      <article class="card">
+        <h3>Arquitectura de identidad</h3>
+        <p>Directorio híbrido on-premise y en la nube, modelo de capas Tier 0/1/2, estaciones de administración privilegiada y gobierno de cuentas privilegiadas y de servicio.</p>
+        <div class="tags"><span class="tag">Active Directory</span><span class="tag">Entra ID</span><span class="tag">PIM / PAM</span><span class="tag">Acceso Condicional</span></div>
+      </article>
+      <article class="card">
+        <h3>Seguridad de infraestructura</h3>
+        <p>Retiro de protocolos inseguros a escala, endurecimiento, segmentación y detección sobre identidad integrada al SOC, con criterio de costo frente a riesgo.</p>
+        <div class="tags"><span class="tag">Zero Trust</span><span class="tag">Hardening</span><span class="tag">Sentinel · KQL</span><span class="tag">Defender for Identity</span></div>
+      </article>
+      <article class="card">
+        <h3>Gobierno y liderazgo</h3>
+        <p>Remediación de auditoría, carteras de infraestructura y ciberseguridad, comités de crisis y gestión de proveedores bajo SLA, con marcos reconocidos.</p>
+        <div class="tags"><span class="tag">NIST CSF</span><span class="tag">ISO/IEC 27001</span><span class="tag">ITIL</span><span class="tag">PMI/PMBOK</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="trayectoria">
+  <div class="wrap">
+    <h2>Trayectoria</h2>
+    <p class="section-intro">Del interior del país al núcleo de la identidad de un banco sistémico, pasando por la docencia universitaria y la consultoría de infraestructura.</p>
+    <ol class="timeline">
+      <li class="role">
+        <div class="when">2019 — 2026</div>
+        <div>
+          <h3>Security Engineer — IAM Platform</h3>
+          <p class="org">Banco de Crédito del Perú (BCP) · Lima</p>
+          <p class="sub">Antes: Technology Engineer — Infrastructure &amp; IaaS (2023–2025) · Subgerente de Gestión de Proyectos TI — Private Cloud (2021–2023) · Subgerente Adjunto de Estrategia de TI (2019–2021)</p>
+          <ul>
+            <li>Responsable de la plataforma de identidad híbrida (Active Directory, Microsoft Entra ID) de la organización; lideró su transición a la función de Seguridad en 2026.</li>
+            <li>Diseñó e implementó el modelo de capas Tier 0/1/2 bajo Zero Trust sobre la totalidad del directorio, con estaciones de administración privilegiada.</li>
+            <li>Lideró un portafolio de cuatro años para retirar protocolos inseguros en más de mil aplicaciones on-premise y en Azure, reduciendo más del 90% de esa superficie.</li>
+            <li>Dirigió la modernización de Windows Server en ciclos bianuales y carteras de infraestructura y ciberseguridad, además de la respuesta a incidentes críticos en comités de crisis.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="when">2013 — 2019</div>
+        <div>
+          <h3>Especialista Senior → Technical Leader → Subject Matter Expert</h3>
+          <p class="org">IBM del Perú · Global Technology Services</p>
+          <ul>
+            <li>Technical Leader de la migración del servicio de directorio de un grupo financiero, incluidas sus operaciones en Bolivia, Chile, Colombia y Estados Unidos.</li>
+            <li>Asumió el ownership del Active Directory del banco del grupo y administró una plataforma que creció a más de 3.000 servidores Windows.</li>
+            <li>Experto de infraestructura en la primera célula ágil de la transformación digital del banco; instructor interno certificado por IBM.</li>
+            <li>Reconocimientos IBM GTS: Excelencia en Ejecución (2014), Instructor con más horas de capacitación (2015) y Especialista Top-Agile (2018).</li>
+          </ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="when">2012 — 2013</div>
+        <div>
+          <h3>Especialista de Infraestructura y Seguridad</h3>
+          <p class="org">GMD · Servicio a Pacífico Seguros</p>
+          <ul>
+            <li>Infraestructura, plataformas Microsoft y seguridad perimetral para una de las principales aseguradoras del país, incluidos sus ejercicios de recuperación ante desastres.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="when">2006 — 2010</div>
+        <div>
+          <h3>Jefe de la Unidad de Sistemas</h3>
+          <p class="org">Cooperativa de Ahorro y Crédito, entidad supervisada por la SBS · La Libertad y Cajamarca</p>
+          <ul>
+            <li>Integró cuatro agencias en una plataforma única y centralizó la aplicación core, fortaleciendo los controles y la auditoría mientras la base de clientes crecía más de 300%.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="publicaciones">
+  <div class="wrap">
+    <h2>Publicaciones</h2>
+    <p class="section-intro">Ensayos sobre deuda de identidad, Zero Trust y la práctica real de la seguridad en organizaciones complejas.</p>
+    <div class="pubs">
+      <a class="pub" href="https://www.linkedin.com/pulse/higiene-digital-por-qu%C3%A9-los-protocolos-zombis-son-el-pedro-pablo-vrvtf/">Higiene digital: por qué los protocolos zombis son el cáncer de la ciberseguridad corporativa <small>Serie 1/3</small></a>
+      <a class="pub" href="https://www.linkedin.com/pulse/arquitectura-de-capas-el-enfoque-assume-breach-y-23-pedro-pablo-zxlof/">Arquitectura de capas: el enfoque Assume Breach y el control de movimientos laterales <small>Serie 2/3</small></a>
+      <a class="pub" href="https://www.linkedin.com/pulse/zero-trust-de-la-teor%C3%ADa-vendedores-realidad-en-33-piminchumo-salinas-iijxf/">Zero Trust: de la teoría de vendedores a la realidad en la trinchera <small>Serie 3/3</small></a>
+      <a class="pub" href="https://www.linkedin.com/pulse/el-punto-ciego-de-la-transformaci%C3%B3n-digital-carrusel-pedro-pablo-qch7f/">El punto ciego de la transformación digital: el carrusel de la rata en el talento TI <small>Ensayo</small></a>
+      <a class="pub" href="https://es.linkedin.com/posts/pedropiminchumo_identitydebt-cybersecurity-zerotrust-activity-7479281283274149888-JMYN">Identity Debt: crónicas de un arquitecto <small>Serie en curso</small></a>
+    </div>
+  </div>
+</section>
+
+<section id="docencia">
+  <div class="wrap">
+    <h2>Docencia y ponencias · Trujillo</h2>
+    <p class="section-intro">Docente de Ingeniería de Sistemas en la Universidad Privada del Norte (2005–2006 y 2010–2012), donde integró el equipo de acreditación internacional ABET de la Facultad de Ingeniería, y en la Universidad San Pedro (2010–2011). Ponente en foros profesionales del norte del país.</p>
+    <div class="talks">
+      <div class="talk"><h3>I Congreso Nacional Internacional de Ingeniería de Sistemas, Computación e Informática (CONIISCI)</h3><p>Colegio de Ingenieros del Perú, CD La Libertad · Trujillo · nov 2011 · Expositor y minicurso-taller</p></div>
+      <div class="talk"><h3>Hacking ético con técnicas de ingeniería social</h3><p>Colegio de Ingenieros del Perú, CD Áncash · Chimbote · feb 2012</p></div>
+      <div class="talk"><h3>Seguridad en escenarios virtuales</h3><p>Tech Day de seguridad informática · Universidad Privada del Norte, Trujillo · may 2011</p></div>
+      <div class="talk"><h3>Servicios de directorio: Active Directory en Windows Server 2008</h3><p>Cámara de Comercio de La Libertad · Trujillo · may 2011</p></div>
+      <div class="talk"><h3>Cloud Computing</h3><p>FLISOL · abr 2011</p></div>
+      <div class="talk"><h3>IV Seminario de Ingeniería Informática y de Sistemas</h3><p>Universidad San Pedro · Trujillo · nov 2010</p></div>
+      <div class="talk"><h3>Introducción a la seguridad informática: ethical hacking</h3><p>Linux User Group · Universidad Privada del Norte, Trujillo · sep 2010</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="credenciales">
+  <div class="wrap">
+    <h2>Credenciales</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Formación</h3>
+        <ul class="list">
+          <li>Ingeniero Informático<span>Universidad Nacional de Trujillo</span></li>
+          <li>Bachiller en Ciencias de la Computación<span>Universidad Nacional de Trujillo</span></li>
+          <li>Bachiller en Educación<span>Universidad Nacional de Trujillo</span></li>
+          <li>Idiomas<span>Español (nativo) · Inglés (intermedio) · Alemán (intermedio)</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Certificaciones</h3>
+        <ul class="list">
+          <li>Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)<span>Microsoft · 2026</span></li>
+          <li>Microsoft Certified: Azure Fundamentals (AZ-900) y Azure AI Fundamentals<span>Microsoft · 2026</span></li>
+          <li>Microsoft Certified Trainer<span>Desde 2003 · en reactivación</span></li>
+          <li>ITIL Foundation in IT Service Management<span>EXIN / AXELOS · 2014</span></li>
+          <li>Trayectoria de certificación previa<span>MCSE y MCSA (Windows Server 2003), MCITP Enterprise Administrator, LPIC-1 y LPIC-2</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Pedro Pablo Piminchumo Salinas · Lima, Perú</span>
+    <a href="https://pe.linkedin.com/in/pedropiminchumo" rel="me">Contacto vía LinkedIn</a>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
